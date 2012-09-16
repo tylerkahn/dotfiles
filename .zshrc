@@ -50,4 +50,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/Library/Haskell/bin:$HOME/.bin/:$PATH"
