@@ -1,0 +1,25 @@
+[user]
+    name = Tyler Kahn
+    email = tkahn6@gmail.com
+[github]
+    user = tylerkahn
+    token =
+[apply]
+    whitespace = strip
+[diff]
+    color = auto
+    rename = copy
+[pager]
+    color = true
+[status]
+    color = auto
+[core]
+    quotepath = false
+    editor = vim
+    excludesfile = $HOME/.gitignore_global
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true

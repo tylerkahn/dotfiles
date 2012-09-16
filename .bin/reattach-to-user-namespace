@@ -1,0 +1,8 @@
+#!/bin/bash
+# For non-OS X systems, a placeholder for the program from
+# https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+if [[ `uname` = "Darwin" ]]; then
+    exec /usr/local/bin/reattach-to-user-namespace
+else
+    exec "$@"
+fi
