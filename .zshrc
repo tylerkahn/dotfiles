@@ -1,5 +1,3 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 OSX="Darwin"
 LINUX="linux-gnu"
 
@@ -31,9 +29,16 @@ ZSH_THEME="bira"
 alias rake='noglob rake'
 alias tmux='tmux -2'
 alias untar='tar xvaf'
+alias tattach='tmux -2 attach-session -t'
+alias tnew='tmux -2 new-session -s'
+alias be='bundle exec'
+
+alias ssh_rlogin='ssh -o ServerAliveInterval=60 tkahn6@rlogin.cs.vt.edu'
 
 if [[ `uname` = $OSX ]]; then
     alias vim='mvim -v'
+    export PATH=$PATH:/usr/texbin
+    export RBENV_ROOT=/usr/local/var/rbenv
 fi
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
@@ -42,12 +47,21 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx ruby rvm rails)
+plugins=(git osx ruby rvm rails rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="$HOME/Library/Haskell/bin:$HOME/.bin/:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$RBENV_ROOT:$PATH"
+export PATH="$HOME/Library/Haskell/bin:$HOME/.bin:$PATH"
+export PATH="$HOME/.bin/pintos-bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="/usr/local/Cellar/rbenv/0.4.0/versions/2.0.0-p247/bin:$PATH"
+
+eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

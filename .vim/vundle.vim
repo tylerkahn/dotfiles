@@ -3,6 +3,7 @@ Bundle 'gmarik/vundle'
 " Colorschemes {{{
 
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'altercation/vim-colors-solarized'
 
 " }}}
 
@@ -14,8 +15,8 @@ Bundle 'wincent/Command-T'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Shougo/neocomplcache'
-Bundle 'SirVer/ultisnips'
+Bundle 'Valloric/YouCompleteMe'
+
 
 Bundle 'Shougo/vimproc'
 
@@ -38,6 +39,9 @@ Bundle 'bitc/vim-hdevtools'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'dag/vim2hs'
+
+" Handlebars
+Bundle 'nono/vim-handlebars'
 
 " }}}
 

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby -w
+require 'directory_watcher'
+
+dw = DirectoryWatcher.new '.', :glob => '**/*.rb', :pre_load => true
+dw.interval = 5.0
+dw.stable = 2
+dw.add_observer do |*args|
+ args.each do |event|
+   resp = `bundle exec rspec`
+   puts resp
+ end
+end
+
+dw.start
+gets      # when the user hits "enter" the script will terminate
+dw.stop

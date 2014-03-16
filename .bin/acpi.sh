@@ -3,7 +3,8 @@ if [ `uname` = "Darwin" ]; then
     CHARGING=`ioreg -l | grep "ExternalChargeCapable" | awk '{printf($5)}'`
 else
     BATTERY=`acpi | cut -d ' ' -f 4 | tr -d ',%'`
-    CHARGING=`acpi | cut -d ' ' -f 3 | tr -d ',' | sed s/Discharging/No/ | sed s/'Full\|Charging'/Yes/`
+    CHARGING=`acpi | cut -d ' ' -f 3 | tr -d ',' | sed s/Discharging/No/ |
+    sed s/'Full\|Charging\|Unknown'/Yes/`
 fi
 COLOR=$1
 

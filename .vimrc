@@ -25,6 +25,14 @@ syntax on
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menu
 
+if has("gui_running")
+  set guioptions-=T " Removes top toolbar
+  set guioptions-=r " Removes right hand scroll bar
+  set go-=L " Removes left hand scroll bar
+endif
+
+set shell=/bin/sh
+
 " }}} IDE
 
 
@@ -83,8 +91,16 @@ set path+=bin
 set path+=src
 set path+=test
 set undofile
+set clipboard=unnamed
 
 " }}} Behavior
+
+" Folding {{{
+
+set foldmethod=syntax
+set foldlevelstart=20
+
+" }}} Folding
 
 
 " Interface {{{
