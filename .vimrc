@@ -176,3 +176,13 @@ let g:syntastic_haskell_checker_args =
   \ '--hlintOpt="--language=XmlSyntax" --hlintOpt="--ignore=Use import/export shortcut" --ghcOpt="-fno-warn-name-shadowing"'
 
 " }}} Haskell
+
+" JavaScript {{{
+
+au FileType javascript call JavaScriptFold()
+
+" }}} JavaScript
+
+" Python {{{
+autocmd BufWritePost *.py call Flake8()
+" }}}

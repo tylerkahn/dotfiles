@@ -25,10 +25,18 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rvm'
 
+Bundle 'lordm/vim-browser-reload-linux'
+
 " }}}
 
 
 " Filetypes {{{
+
+" JavaScript
+Bundle 'marijnh/tern_for_vim'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'bergren2/JavaScript-Indent'
+
 
 " Markdown
 Bundle 'hallison/vim-markdown'
@@ -43,6 +51,11 @@ Bundle 'dag/vim2hs'
 " Handlebars
 Bundle 'nono/vim-handlebars'
 
+" }}}
+
+" Python
+Bundle 'nvie/vim-flake8'
+Bundle 'tell-k/vim-autopep8'
 " }}}
 
 
