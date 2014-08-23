@@ -10,20 +10,21 @@ Bundle 'altercation/vim-colors-solarized'
 
 " Features {{{
 
-Bundle 'wincent/Command-T'
+"Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 
 Bundle 'Shougo/vimproc'
 
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rvm'
 
 Bundle 'lordm/vim-browser-reload-linux'
 

@@ -36,7 +36,7 @@ alias be='bundle exec'
 alias ssh_rlogin='ssh -o ServerAliveInterval=60 tkahn6@rlogin.cs.vt.edu'
 
 if [[ `uname` = $OSX ]]; then
-    alias vim='mvim -v'
+    # alias vim='mvim -v'
     export PATH=$PATH:/usr/texbin
     export RBENV_ROOT=/usr/local/var/rbenv
 fi
@@ -50,6 +50,7 @@ fi
 plugins=(git osx ruby rvm rails rbenv)
 
 source $ZSH/oh-my-zsh.sh
+[[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin

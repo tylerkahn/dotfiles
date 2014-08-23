@@ -47,6 +47,8 @@ nnoremap <silent> <leader>tsy :SyntasticToggleMode<CR>
 nnoremap <silent> <leader>tne :NERDTreeToggle<CR>
 nnoremap <silent> <leader>tli :setlocal wrap! list!<CR>
 
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " disable arrow keys
 map <up> <nop>
 map <down> <nop>
@@ -142,9 +144,20 @@ set smartcase
 
 
 " Plugins {{{
+"
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
 
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  let g:ctrlp_use_caching = 0
+
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
 let g:ctrlp_custom_ignore             = '\v%(\.git|_darcs|cabal-dev|dist|state|tags)$'
-let g:ctrlp_working_path_mode         = 0
+let g:ctrlp_working_path_mode         = 'ra'
 let g:cumino_default_terminal         = '/usr/bin/gnome-terminal'
 let g:neocomplcache_enable_at_startup = 1
 let g:syntastic_enable_highlighting   = 0

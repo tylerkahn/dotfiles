@@ -10,6 +10,8 @@
     color = true
 [status]
     color = auto
+[color]
+    ui = auto
 [core]
     quotepath = false
     editor = vim
