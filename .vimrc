@@ -48,6 +48,7 @@ nnoremap <silent> <leader>tne :NERDTreeToggle<CR>
 nnoremap <silent> <leader>tli :setlocal wrap! list!<CR>
 
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+map <leader>d :split<CR> :YcmCompleter GoTo<CR>
 
 " disable arrow keys
 map <up> <nop>
@@ -164,6 +165,8 @@ let g:syntastic_enable_highlighting   = 0
 let g:syntastic_stl_format            = '%E{ E:%fe }'
 let g:UltiSnipsDontReverseSearchPath  = 1
 let NERDTreeIgnore                    = [g:ctrlp_custom_ignore]
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 let &statusline = join([
   \ '%<%f %h%m%r',
