@@ -100,6 +100,8 @@ set path+=test
 set undofile
 set clipboard=unnamed
 
+set backspace=indent,eol,start
+
 " }}} Behavior
 
 " Folding {{{
