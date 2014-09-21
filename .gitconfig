@@ -8,11 +8,16 @@
     rename = copy
 [pager]
     color = true
+    less = -FMRiX
 [status]
     color = auto
+[push]
+    default = simple
 [color]
     ui = auto
 [core]
     quotepath = false
     editor = vim
     excludesfile = ~/.gitignore_global
+[alias]
+    curbranch = rev-parse --abbrev-ref HEAD
