@@ -11,6 +11,8 @@
 *.exe
 *.o
 *.so
+*.pyc
+*.egg-info
 
 # Packages #
 ############
