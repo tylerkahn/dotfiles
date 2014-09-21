@@ -62,6 +62,10 @@ imap <right> <nop>
 
 " }}} Mappings
 
+" Commands {{{
+command CDC cd %:p:h
+command LCDC lcd %:p:h
+" }}} Commands
 
 " Indentation {{{
 
