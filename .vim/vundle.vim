@@ -34,7 +34,7 @@ Bundle 'lordm/vim-browser-reload-linux'
 " Filetypes {{{
 
 " JavaScript
-Bundle 'marijnh/tern_for_vim'
+" Bundle 'marijnh/tern_for_vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'bergren2/JavaScript-Indent'
 

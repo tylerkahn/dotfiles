@@ -44,18 +44,21 @@ plugins=(git osx ruby rvm rails rbenv)
 source $ZSH/oh-my-zsh.sh
 
 if [[ `uname` = $OSX ]]; then
-    # alias vim='mvim -v'
+    alias vim='mvim -v'
     export PATH=$PATH:/usr/texbin
     export RBENV_ROOT=/usr/local/var/rbenv
-    [[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
     export PATH="$HOME/Library/Haskell/bin:$PATH"
     export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 fi
+
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && bash `brew --prefix`/etc/autojump.sh
 
 # Customize to your needs...
 
 export PATH="$RBENV_ROOT:$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 eval "$(rbenv init -)"
