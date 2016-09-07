@@ -1,6 +1,6 @@
 # VIM #
 #######
-*.sw[po]
+*.sw[a-z]
 **~
 
 # Compiled source #

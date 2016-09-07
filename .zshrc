@@ -55,6 +55,8 @@ fi
 [[ -s `brew --prefix`/etc/autojump.sh ]] && bash `brew --prefix`/etc/autojump.sh
 
 # Customize to your needs...
+#
+export NODE_REPL_HISTORY_FILE="$HOME/.node_repl_history"
 
 export PATH="$RBENV_ROOT:$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"

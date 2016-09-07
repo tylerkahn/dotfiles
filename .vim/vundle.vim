@@ -4,6 +4,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'blueshirts/darcula'
 
 " }}}
 

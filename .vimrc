@@ -13,7 +13,7 @@ runtime vundle.vim
 " Colorscheme {{{
 
 set t_Co=256
-colorscheme jellybeans
+colorscheme darcula
 
 " }}} Colorscheme
 
@@ -70,9 +70,9 @@ command LCDC lcd %:p:h
 " Indentation {{{
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 
 " }}} Indentation
@@ -201,7 +201,8 @@ let g:syntastic_haskell_checker_args =
 
 " JavaScript {{{
 
-au FileType javascript call JavaScriptFold()
+" au FileType javascript call JavaScriptFold()
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " }}} JavaScript
 
