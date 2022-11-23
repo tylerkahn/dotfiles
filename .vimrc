@@ -4,9 +4,74 @@ filetype off
 let mapleader = '\'
 let maplocalleader = ','
 let g:vundle_default_git_proto = 'git'
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-runtime vundle.vim
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Colorschemes {{{
+
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'blueshirts/darcula'
+
+" }}}
+
+
+" Features {{{
+
+"Plugin 'wincent/Command-T'
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+"Plugin 'Valloric/YouCompleteMe'
+
+
+Plugin 'Shougo/vimproc'
+
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+
+"Plugin 'lordm/vim-browser-reload-linux'
+
+" }}}
+
+
+" Filetypes {{{
+
+" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+
+" Markdown
+Plugin 'hallison/vim-markdown'
+
+" Haskell
+Plugin 'adinapoli/cumino'
+Plugin 'bitc/vim-hdevtools'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'ujihisa/neco-ghc'
+Plugin 'dag/vim2hs'
+
+" Handlebars
+Plugin 'nono/vim-handlebars'
+
+" }}}
+
+" Python
+Plugin 'nvie/vim-flake8'
+Plugin 'tell-k/vim-autopep8'
+" }}}
+
+call vundle#end()
+
+filetype plugin indent on
 
 " }}} Vundle
 
@@ -15,6 +80,33 @@ runtime vundle.vim
 set t_Co=256
 colorscheme darcula
 
+" for transparent background
+function! AdaptColorscheme()
+   highlight clear CursorLine
+   highlight Normal ctermbg=none
+   highlight LineNr ctermbg=none
+   highlight Folded ctermbg=none
+   highlight NonText ctermbg=none
+   highlight SpecialKey ctermbg=none
+   highlight VertSplit ctermbg=none
+   highlight SignColumn ctermbg=none
+endfunction
+autocmd ColorScheme * call AdaptColorscheme()
+
+highlight Normal guibg=NONE ctermbg=NONE
+highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=NONE
+highlight clear LineNr
+highlight clear SignColumn
+highlight clear StatusLine
+
+
+" Change Color when entering Insert Mode
+autocmd InsertEnter * set nocursorline
+
+" Revert Color to default when leaving Insert Mode
+autocmd InsertLeave * set nocursorline
 " }}} Colorscheme
 
 

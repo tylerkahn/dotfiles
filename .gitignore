@@ -1,2 +1,5 @@
 .vim/bundle/*
 !.vim/bundle/vundle
+*.un~
+.DS_Store
+.ssh/*

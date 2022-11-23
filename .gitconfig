@@ -1,6 +1,6 @@
 [user]
     name = Tyler Kahn
-    email = tkahn6@gmail.com
+    email = tyler@tylerkahn.org
 [apply]
     whitespace = strip
 [diff]
@@ -21,3 +21,14 @@
     excludesfile = ~/.gitignore_global
 [alias]
     curbranch = rev-parse --abbrev-ref HEAD
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
