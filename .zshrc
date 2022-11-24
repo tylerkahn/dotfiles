@@ -145,7 +145,9 @@ if test -e "/usr/lib/kitty/shell-integration/kitty.zsh"; then source "/usr/lib/k
 export PATH="/opt/homebrew/sbin:$PATH"
 
 # asdf
-export ASDF_DIR=/opt/homebrew/opt/asdf/libexec
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+if [[ `uname` = $OSX ]]; then
+	export ASDF_DIR=/opt/homebrew/opt/asdf/libexec
+	. /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
 
 eval "$(starship init zsh)"
