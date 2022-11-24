@@ -148,6 +148,8 @@ export PATH="/opt/homebrew/sbin:$PATH"
 if [[ `uname` = $OSX ]]; then
 	export ASDF_DIR=/opt/homebrew/opt/asdf/libexec
 	. /opt/homebrew/opt/asdf/libexec/asdf.sh
+else
+	. $HOME/.asdf/asdf.sh
 fi
 
 eval "$(starship init zsh)"
